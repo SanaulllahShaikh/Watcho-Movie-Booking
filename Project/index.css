@@ -1,0 +1,335 @@
+:root {
+    --white: #fff;
+    --red: #e74c3c;
+    --black: #000;
+    --img-color: #ededed;
+    --overlay: rgba(0, 0, 0, 0.75);
+}
+
+
+
+li {
+    list-style-type: none;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.174);
+}
+
+.hero {
+    background-image: url("hero-theatre.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 620px;
+}
+
+.hero::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.819), #0000003b);
+}
+
+.hero::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    z-index: 30;
+
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.532), transparent);
+}
+
+.active-btn {
+    background: white;
+    color: black;
+}
+
+.coming-soon-slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transform: translateX(0%);
+    animation: slide 15s infinite;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #000;
+}
+
+.slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 70%);
+    z-index: 1;
+}
+
+
+
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 600px;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.carousel-radio {
+    position: absolute;
+    bottom: 0;
+    left: -9999px;
+}
+
+.primary-container-slider {
+    max-width: 450px;
+    color: var(--white);
+    margin: auto;
+    font-family: sans-serif;
+    max-height: 600px;
+}
+
+/* SLIDESHOW
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.featured-wrapper {
+    position: relative;
+}
+
+.featured-wrapper .featured-list {
+    display: grid;
+}
+
+.featured-wrapper .featured-list li {
+    grid-column: 1;
+    grid-row: 1;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.featured-wrapper .arrows label::before,
+.featured-wrapper .arrows label::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--black);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-color: var(--white);
+    opacity: 0.5;
+    transition: opacity 0.25s;
+}
+
+.featured-wrapper .arrows label::before {
+    left: 10px;
+}
+
+.featured-wrapper .arrows label::after {
+    right: 10px;
+}
+
+.featured-wrapper .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.featured-wrapper .dots li:not(:last-child) {
+    margin-right: 8px;
+}
+
+.featured-wrapper .dots label {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    transition: background 0.25s;
+}
+
+.featured-wrapper .dots label:hover {
+    background: currentColor;
+}
+
+.thumb-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    margin-top: 20px;
+}
+
+.thumb-list label {
+    display: grid;
+}
+
+.thumb-list img,
+.thumb-list .outer {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.thumb-list .outer {
+    display: grid;
+    place-items: center;
+    transition: background 0.25s;
+}
+
+.thumb-list .inner {
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.25s;
+}
+
+/* MIMIC CLICK EVENT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+[id="image1"]:checked~.primary-container-slider .featured-list li:nth-child(1),
+[id="image2"]:checked~.primary-container-slider .featured-list li:nth-child(2),
+[id="image3"]:checked~.primary-container-slider .featured-list li:nth-child(3),
+[id^="image"]:checked~.primary-container-slider .arrows [for^="image"]:hover::before,
+[id^="image"]:checked~.primary-container-slider .arrows [for^="image"]:hover::after {
+    opacity: 1;
+    z-index: 40;
+}
+
+[id="image1"]:checked~.primary-container-slider .arrows [for="image3"]::before,
+[id="image2"]:checked~.primary-container-slider .arrows [for="image1"]::before,
+[id="image3"]:checked~.primary-container-slider .arrows [for="image2"]::before {
+    content: '';
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow-prev-slideshow.svg);
+}
+
+[id="image1"]:checked~.primary-container-slider .arrows [for="image2"]::after,
+[id="image2"]:checked~.primary-container-slider .arrows [for="image3"]::after,
+[id="image3"]:checked~.primary-container-slider .arrows [for="image1"]::after {
+    content: '';
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow-next-slideshow.svg);
+}
+
+[id="image1"]:checked~.primary-container-slider .dots [for="image1"],
+[id="image2"]:checked~.primary-container-slider .dots [for="image2"],
+[id="image3"]:checked~.primary-container-slider .dots [for="image3"] {
+    background: white;
+    width: 14px;
+    height: 14px;
+}
+
+[id="image1"]:checked~.primary-container-slider [for="image1"] .outer,
+[id="image2"]:checked~.primary-container-slider [for="image2"] .outer,
+[id="image3"]:checked~.primary-container-slider [for="image3"] .outer {
+    background: var(--overlay);
+}
+
+[id="image1"]:checked~.primary-container-slider [for="image1"] .inner,
+[id="image2"]:checked~.primary-container-slider [for="image2"] .inner,
+[id="image3"]:checked~.primary-container-slider [for="image3"] .inner {
+    opacity: 1;
+    transform: none;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+.mobile-menu {
+    display: none;
+    /* Initially hidden */
+}
+
+#menu {
+    position: absolute;
+    right: -100%;
+    /* Hide off-screen initially */
+    top: 0;
+    height: 100%;
+    width: 80%;
+    /* Adjust width as needed */
+    background-color: #111;
+    /* Adjust for the menu background */
+    transition: all 0.3s ease-in-out;
+}
+
+
+@keyframes slide {
+
+    0%,
+    20% {
+        transform: translateX(0%);
+    }
+
+    25%,
+    45% {
+        transform: translateX(-100%);
+    }
+
+    50%,
+    70% {
+        transform: translateX(-200%);
+    }
+
+    75%,
+    95% {
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media only screen and (min-width:1600px) {
+    .hero {
+        max-width: 1700px;
+    }
+
+    .primary-container {
+        max-width: 1600px;
+    }
+}
