@@ -1,0 +1,10 @@
+Instructions: How to Run?
+After you finish downloading the project, unzip the project file and head over to your XAMPP directory.
+There you’ll find a folder naming “htdocs”.
+Inside the “htdocs” folder, paste the Project folder.
+Open your favorite browser; we recommend using Google Chrome or Mozilla Firefox.
+Then, go to URL “http://localhost/phpmyadmin“.
+Create a Database with name “movie_booking”.
+Click on the “Import” tab and choose the database file (.sql) which is provided naming “DATABASE” inside "Query.sql".
+After setting up all these, go to URL “http://localhost/Movie_Booking_System/Project“
+All the login details are provided inside the Movie_Booking_System Documents folder, check that out and enter in order to use it.
