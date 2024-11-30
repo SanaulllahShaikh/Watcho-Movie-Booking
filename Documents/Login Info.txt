@@ -1,0 +1,8 @@
+To Login Into Information
+
+LOGIN AS ADMIN
+ email : admin@gmail.com
+ pass  : admin
+LOGIN AS USER
+ email : test@gmail.com
+ pass  : test

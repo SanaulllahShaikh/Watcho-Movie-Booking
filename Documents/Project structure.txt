@@ -1,0 +1,122 @@
+Project                                               
+├─ admin                                              
+│  ├─ controllers                                     
+│  │  ├─ cancel_booking.php                           
+│  │  ├─ delete_cinema.php                            
+│  │  ├─ delete_favorite.php                          
+│  │  ├─ delete_genre.php                             
+│  │  ├─ delete_movie.php                             
+│  │  ├─ delete_review.php                            
+│  │  ├─ delete_screen.php                            
+│  │  ├─ delete_show.php                              
+│  │  ├─ delete_user.php                              
+│  │  ├─ fetch_booking.php                            
+│  │  ├─ fetch_cinemas.php                            
+│  │  ├─ fetch_favorites.php                          
+│  │  ├─ fetch_genres.php                             
+│  │  ├─ fetch_movies.php                             
+│  │  ├─ fetch_reviews.php                            
+│  │  ├─ fetch_screens.php                            
+│  │  ├─ fetch_shows.php                              
+│  │  ├─ fetch_users.php                              
+│  │  ├─ link_genre_movie.php                         
+│  │  ├─ show_fetch_screens.php                       
+│  │  ├─ update_cinema.php                            
+│  │  ├─ update_genre.php                             
+│  │  ├─ update_movie.php                             
+│  │  ├─ update_screen.php                            
+│  │  ├─ update_show.php                              
+│  │  ├─ upload_cinema.php                            
+│  │  ├─ upload_genre.php                             
+│  │  ├─ upload_movie.php                             
+│  │  ├─ upload_screen.php                            
+│  │  └─ upload_show.php                              
+│  ├─ images                                          
+│  │  └─ theatre.jpg                                  
+│  ├─ includes                                        
+│  │  └─ header.php                                   
+│  ├─ bookings.php                                    
+│  ├─ cinemas.php                                     
+│  ├─ edit_cinema.php                                 
+│  ├─ edit_movie.php                                  
+│  ├─ edit_screen.php                                 
+│  ├─ edit_show.php                                   
+│  ├─ favorites.php                                   
+│  ├─ genres.php                                      
+│  ├─ get_linked_genres.php                           
+│  ├─ index.php                                       
+│  ├─ link_genre.php                                  
+│  ├─ logout.php                                      
+│  ├─ movies.php                                      
+│  ├─ requirements.txt                                
+│  ├─ reviews.php                                     
+│  ├─ screen.php                                      
+│  ├─ show.php                                        
+│  ├─ upload_cinema.php                               
+│  ├─ upload_genre.php                                
+│  ├─ upload_movie.php                                
+│  ├─ upload_screen.php                               
+│  ├─ upload_show.php                                 
+│  └─ users.php                                       
+├─ assets                                             
+│  └─ images                                          
+│     ├─ avengers.jpg                                 
+│     ├─ banner.webp                                  
+│     ├─ bollywood.jpg                                
+│     ├─ book-tickets-screen.webp                     
+│     ├─ ex.png                                       
+│     ├─ extraction2.png                              
+│     ├─ hero-theatre.jpg                             
+│     ├─ hollywood.jfif                               
+│     ├─ hollywood1.jpg                               
+│     ├─ logo.png                                     
+│     ├─ mm2w.jpg                                     
+│     ├─ oppenheimer.webp                             
+│     ├─ sh.png                                       
+│     ├─ theatre.jpg                                  
+│     ├─ tollywood.jpg                                
+│     └─ tollywood1.jpg                               
+├─ controllers                                        
+│  ├─ add_to_favorites.php                            
+│  ├─ book_seats.php                                  
+│  ├─ config.php                                      
+│  ├─ delete_booking.php                              
+│  ├─ fetch_bookings.php                              
+│  ├─ fetch_favorites.php                             
+│  ├─ fetch_movies.php                                
+│  ├─ fetch_screens.php                               
+│  ├─ fetch_seats.php                                 
+│  ├─ fetch_shows.php                                 
+│  ├─ latest_movies.controller.php                    
+│  ├─ login.controller.php                            
+│  ├─ logout.php                                      
+│  ├─ payment.php                                     
+│  ├─ popular_movies.controller.php                   
+│  ├─ register.controller.php                         
+│  ├─ remove_favorite.php                             
+│  ├─ reserve_seats.php                               
+│  └─ updateActiveTime.php                            
+├─ frameworks                                         
+│  └─ jquery-3.7.1.min.js                             
+├─ includes                                           
+│  ├─ footer.php                                      
+│  └─ header.php                                      
+├─ library                                            
+│  └─ videojs                                         
+│     ├─ video-js.css                                 
+│     └─ video.min.js                                 
+├─ views                                              
+│  ├─ uploads   
+│  │  └─                      
+│  ├─ bookings.php                                    
+│  ├─ book_seat.php                                   
+│  ├─ favorites.php                                   
+│  ├─ login.php                                       
+│  ├─ movie.php                                       
+│  ├─ movies.php                                      
+│  ├─ payment.php                                     
+│  ├─ register.php                                    
+│  └─ video-js.css                                    
+├─ database_structure.txt                             
+├─ index.css                                          
+└─ index.php                                          
